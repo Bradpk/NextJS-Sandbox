@@ -1,77 +1,62 @@
 'use client';
-import {useState} from 'react';
+import React, { useState } from 'react';
 
-function RockPaperScissors () {
-    const getUserChoice = userInput => {
-        userInput = userInput.toLowerCase();
-        if(userInput == 'rock' || userInput == 'paper' || userInput == 'scissors'){
-          return userInput 
-        } else {
-          console.log('Not a valid option, must choose rock, paper or scissors')
-        }
-        }
-        
-        const getComputerChoice = () => {
-        let randomNumber = Math.floor(Math.random() * 3);
-        switch(randomNumber) {
-          case 0:
-          return 'rock';
-          break;
-          case 1:
-          return 'paper';
-          break;
-          case 2:
-          return 'scissors'
-          break;
-        }
-        }
-        
-        const determineWinner = (userChoice, computerChoice) => {
-          if (userChoice === computerChoice){
-            return 'Draw'
-          } 
-          if (userChoice === 'paper'){
-            if(computerChoice === 'rock'){
-              return 'You Won!'
-            } else {
-              return 'Computer Won!'
-            }
-          }
-          if (userChoice === 'scissors'){
-            if (computerChoice ==='rock'){
-              return 'Computer Won!'
-            } else {
-              return 'You Won!'
-            }
-          }
-          if(userChoice === 'rock'){
-            if(computerChoice === 'paper'){
-              return 'Computer Won!'
-            } else {
-              return 'You Won!'
-            }
-          }
-        }
-        
-        const playGame = () => {
-          let userChoice = getUserChoice('rock')
-          let computerChoice = getComputerChoice()
-          console.log(userChoice)
-          console.log(computerChoice)
-          console.log(determineWinner(userChoice, computerChoice))
-        }
-        
-        playGame()
+function RockPaperScissors() {
+  const [userChoice, setUserChoice] = useState('');
+  const [result, setResult] = useState('');
 
-        return(
-            <>
-            <p>Rock Paper Scissors</p>
-            <p>Type Rock Paper or Scissors:</p>
-            <input></input>
-            <button>Shoot!</button>
-            <p>{getComputerChoice}</p>
-            </>
-        )
+  const getComputerChoice = () => {
+    let randomNumber = Math.floor(Math.random() * 3);
+    switch (randomNumber) {
+      case 0:
+        return 'rock';
+      case 1:
+        return 'paper';
+      case 2:
+        return 'scissors';
+    }
+  };
+
+  const determineWinner = (userChoice, computerChoice) => {
+    if (userChoice === computerChoice) {
+      return 'Draw';
+    }
+  
+    if (userChoice === 'rock') {
+      return computerChoice === 'scissors' ? 'You Won!' : 'Computer Won!';
+    }
+  
+    if (userChoice === 'paper') {
+      return computerChoice === 'rock' ? 'You Won!' : 'Computer Won!';
+    }
+  
+    if (userChoice === 'scissors') {
+      return computerChoice === 'paper' ? 'You Won!' : 'Computer Won!';
+    }
+  };
+
+  const playGame = () => {
+    const computerChoice = getComputerChoice();
+    const gameResult = determineWinner(userChoice, computerChoice);
+    setResult(gameResult);
+  };
+
+  return (
+    <>
+      <p>Rock Paper Scissors</p>
+      <p>Type Rock, Paper, or Scissors:</p>
+      <input
+        value={userChoice}
+        onChange={(e) => setUserChoice(e.target.value.toLowerCase())}
+      />
+      <button onClick={playGame}>Shoot!</button>
+      <p>You chose: {userChoice} | Computer Chose {getComputerChoice()}</p>
+      <p>{result}</p>
+    </>
+  );
 }
 
-export default RockPaperScissors
+export default RockPaperScissors;
+
+
+// Look at this tommorow its all fucked up 
