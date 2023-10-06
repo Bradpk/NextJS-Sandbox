@@ -2,20 +2,23 @@
 import { useState } from "react";
 
 function Weather() {
-
 const[fahrenheit, setFahrenehit] = useState('')
-    const kelvin = 293
-    let celsius = kelvin - 273
+    let celsius = fahrenheit - 32 * 0.56;
+    celsius = Math.floor(celsius)
     let newton = celsius * (33 / 100)
     newton = Math.floor(newton);
+
+    const handleTemp = (event) => {
+        setFahrenehit(event.target.value);
+    }
 
     return (
         <div>
             <p>Enter the temperature in fahrenheit:</p>
-            <input></input>
+            <input type='text' value={fahrenheit} onChange={handleTemp}></input>
             <p>The temperature is {fahrenheit} degrees Fahrenheit</p>
-            <p>The temperature is {celsius} degrees Newtons</p>
-            <p>The temperature is {newton} degrees Newtons</p>
+            <p>Which is {celsius} degrees celsius</p>
+            <p>Which is {newton} degrees Newtons</p>
         </div>
     )
 }
