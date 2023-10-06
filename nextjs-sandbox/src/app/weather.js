@@ -1,15 +1,21 @@
-function Weather(){
-const kelvin = 293
-let celsius = kelvin - 273 
-let newton = celsius * (33/100)
-newton = Math.floor(newton);
-let fahrenheit = celsius * (9/5) + 32
-fahrenheit = Math.floor(fahrenheit);
+'use client';
+import { useState } from "react";
+
+function Weather() {
+
+const[fahrenheit, setFahrenehit] = useState('')
+    const kelvin = 293
+    let celsius = kelvin - 273
+    let newton = celsius * (33 / 100)
+    newton = Math.floor(newton);
 
     return (
         <div>
-<p>The temperature is {fahrenheit} degrees Fahrenheit</p>
-<p>The temperature is {newton} degrees Newtons</p>
+            <p>Enter the temperature in fahrenheit:</p>
+            <input></input>
+            <p>The temperature is {fahrenheit} degrees Fahrenheit</p>
+            <p>The temperature is {celsius} degrees Newtons</p>
+            <p>The temperature is {newton} degrees Newtons</p>
         </div>
     )
 }
