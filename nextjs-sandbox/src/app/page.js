@@ -1,9 +1,16 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import Test from './test'
+import Weather from './weather'
+import DogYears from './dogYears'
 
 export default function Home() {
   return (
-  
-      <Test />
-  )}
+    <>
+      <br></br>
+      <Weather />
+      <br></br>
+      <DogYears />
+      <br></br>
+    </>
+  )
+}
