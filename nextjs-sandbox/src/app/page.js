@@ -3,6 +3,7 @@ import styles from './page.module.css'
 import Weather from './weather'
 import DogYears from './dogYears'
 import Eightball from './eightball'
+import RockPaperScissors from './rockpaperscissors'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Eightball />
       <br></br>
       <br></br>
+      <RockPaperScissors />
 
     </>
   )

@@ -17,7 +17,7 @@ const[fahrenheit, setFahrenehit] = useState('')
             <p>Enter the temperature in fahrenheit:</p>
             <input type='text' value={fahrenheit} onChange={handleTemp}></input>
             <p>The temperature is {fahrenheit} degrees Fahrenheit</p>
-            <p>Which is {celsius} degrees celsius</p>
+            <p>Which is {celsius} degrees Celsius</p>
             <p>Which is {newton} degrees Newtons</p>
         </div>
     )

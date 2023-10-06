@@ -62,6 +62,16 @@ function RockPaperScissors () {
         }
         
         playGame()
+
+        return(
+            <>
+            <p>Rock Paper Scissors</p>
+            <p>Type Rock Paper or Scissors:</p>
+            <input></input>
+            <button>Shoot!</button>
+            <p>{getComputerChoice}</p>
+            </>
+        )
 }
 
 export default RockPaperScissors
