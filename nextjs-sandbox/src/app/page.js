@@ -8,13 +8,17 @@ export default function Home() {
   return (
     <>
       <br></br>
+      <br></br>
       <Weather />
+      <br></br>
       <br></br>
       <DogYears />
       <br></br>
+      <br></br>
       <Eightball />
       <br></br>
-      
+      <br></br>
+
     </>
   )
 }
