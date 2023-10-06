@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import Test from './test'
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
+      <Test />
         <p>
           Get started by editing yo mama&nbsp;
           <code className={styles.code}>src/app/page.js</code>
