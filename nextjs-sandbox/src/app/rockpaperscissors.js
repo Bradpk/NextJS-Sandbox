@@ -62,6 +62,16 @@ function RockPaperScissors() {
         }
         
         playGame()
+
+        return(
+            <>
+            <p>Rock Paper Scissors</p>
+            <input></input>
+            <button>Shoot!</button>
+            <p>Computer threw: </p> 
+            <p>{determineWinner}</p>
+            </>
+        )
 }
 
 export default RockPaperScissors;
