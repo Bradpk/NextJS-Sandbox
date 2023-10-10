@@ -43,6 +43,3 @@ return (
 
 export default SleepCalculator;
 
-
-
-  //convert this to react
