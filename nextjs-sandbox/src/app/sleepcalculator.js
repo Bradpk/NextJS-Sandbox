@@ -63,7 +63,17 @@ const getSleepHours = (day) => {
   
   console.log(calculateSleepDebt())
 
-}
+
+
+return (
+    <>
+    <p>Sleep Debt Calculator</p>
+    <p>Week Goal: 56 hours of sleep</p>
+    <input></input>
+    <button></button>
+    <p></p>
+    </>
+)}
 
 export default SleepCalculator;
 
