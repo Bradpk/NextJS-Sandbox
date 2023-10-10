@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 function RockPaperScissors() {
   const [userInput, setUserInput] = useState('');
@@ -64,7 +64,7 @@ function RockPaperScissors() {
     <>
       <p>Rock Paper Scissors</p>
       <input onChange={handleInputChange} value={userInput}></input>
-      <button onClick={playGame}>Shoot!</button>
+      <button onClick={playGame} onKeyPress={playGame}>Shoot!</button>
       {computerChoice && <p>Computer threw: {computerChoice}</p>}
       {result && <p>{result}</p>}
     </>

@@ -1,3 +1,7 @@
+'use client';
+import {useState} from "react";
+
+function SleepCalculator () {
 const getSleepHours = (day) => {
     switch (day) {
       case'Monday':
@@ -59,7 +63,9 @@ const getSleepHours = (day) => {
   
   console.log(calculateSleepDebt())
 
+}
 
+export default SleepCalculator;
 
 
 
