@@ -5,6 +5,7 @@ import DogYears from './dogyears'
 import Eightball from './eightball'
 import RockPaperScissors from './rockpaperscissors'
 import SleepCalculator from './sleepcalculator'
+import Experiment from './experiment'
 
 
 export default function Home() {
@@ -25,7 +26,9 @@ export default function Home() {
       <br></br>
       <br></br>
       <SleepCalculator />
-
+      <br></br>
+      <br></br>
+      <Experiment />
     </>
   )
 }
