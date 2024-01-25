@@ -14,7 +14,7 @@ const [getItems, setGetItems] = useState([]);
 
     return (
         <>
-        <h4>{getItems}</h4>
+        <h4>{getItems.results}</h4>
         </>
     )
 }
