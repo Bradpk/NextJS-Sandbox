@@ -6,6 +6,7 @@ import Eightball from './eightball'
 import RockPaperScissors from './rockpaperscissors'
 import SleepCalculator from './sleepcalculator'
 import Experiment from './experiment'
+import ApiTest from './api'
 
 
 export default function Home() {
@@ -29,6 +30,9 @@ export default function Home() {
       <br></br>
       <br></br>
       <Experiment />
+      <br></br>
+      <br></br>
+      <ApiTest />
     </>
   )
 }
